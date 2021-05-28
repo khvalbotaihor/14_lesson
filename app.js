@@ -11,7 +11,7 @@ class NameField {
 class NameGenerator {
     constructor() {
     const btn = document.querySelector('button');
-    btn.addEventListener('click', ???)
+    btn.addEventListener('click', addName())
     }
 
     addName() {
