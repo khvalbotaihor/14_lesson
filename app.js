@@ -10,7 +10,8 @@ class NameField {
 class NameGenerator {
     constructor() {
     const btn = document.querySelector('button');
-    btn.addEventListener('click', this.addName)
+    const names = ['Ihor', 'Ivan', 'Victor'];
+    btn.addEventListener('click', this.addName);
     }
 
     addName() {
