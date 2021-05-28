@@ -5,7 +5,6 @@ class NameField {
         const nameListHook = document.querySelector('#names');
         nameListHook.appendChild(field);
     }
-
 }
 
 class NameGenerator {
