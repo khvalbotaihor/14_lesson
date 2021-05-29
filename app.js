@@ -10,12 +10,21 @@ class NameField {
 class NameGenerator {
     constructor() {
     const btn = document.querySelector('button');
-    const names = ['Ihor', 'Ivan', 'Victor'];
-    btn.addEventListener('click', this.addName);
+    this.names = ['Ihor', 'Ivan', 'Victor'];
+    this.currentName = 0;
+        console.log(this)
+        btn.addEventListener('click', () => {
+            this.addName();
+        })
     }
 
     addName() {
-        const name = new NameField("Max");
+        console.log(this)
+        const name = new NameField(this.names[this.currentName]);
+        this.currentName++;
+        if (this.currentName>=this.names.length){
+            this.currentName=0;
+        }
     }
 }
 
