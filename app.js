@@ -11,15 +11,17 @@ class NameGenerator {
     constructor() {
     const btn = document.querySelector('button');
     this.names = ['Ira','Robot','Blue'];
-    this.FirstName = 0;
+    this.CurrentName = 0;
+        console.log(this)
     btn.addEventListener('click', this.addName.bind(this))
     }
 
     addName(){
-        const name = new NameField(this.names[this.FirstName]);
-        this.FirstName++;
-        if (this.FirstName >= this.names.length){
-            this.FirstName=0;
+        console.log(this)
+        const name = new NameField(this.names[this.CurrentName]);
+        this.CurrentName++;
+        if (this.CurrentName >= this.names.length){
+            this.CurrentName=0;
         }
     }
 }
