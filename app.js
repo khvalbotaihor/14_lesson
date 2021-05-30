@@ -28,3 +28,14 @@ class GenerateNames {
 }
 
 const gen = new GenerateNames()
+
+
+const person = {
+    name: 'Ihor',
+    age:30,
+    greet: () => {
+        console.log(`Hello ${name}`)
+    }
+}
+
+person.greet();
