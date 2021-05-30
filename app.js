@@ -1,31 +1,30 @@
 class NameField {
     constructor(name) {
-        const field = document.createElement('li');
+        const field = document.createElement('li')
         field.textContent = name;
-        const nameListHook = document.querySelector('#names');
-        nameListHook.appendChild(field);
+        const HandleNames = document.querySelector('#names')
+        HandleNames.appendChild(field)
     }
 }
 
-class NameGenerator {
+class GenerateNames {
     constructor() {
-        const btn = document.querySelector('button');
-        this.names = ['Ira', 'Robot', 'Blue'];
-        this.CurrentName = 0;
-        console.log(this)
+        const btn = document.querySelector('button')
+        this.names = ['Illia', 'Berny', 'Taylor']
+        this.currentNameIndex = 0;
         btn.addEventListener('click', () => {
-            this.addName();
+            this.addNames()
         })
     }
 
-    addName() {
+    addNames(){
         console.log(this)
-        const name = new NameField(this.names[this.CurrentName]);
-        this.CurrentName++;
-        if (this.CurrentName >= this.names.length) {
-            this.CurrentName = 0;
+        const name = new NameField(this.names[this.currentNameIndex])
+        this.currentNameIndex++;
+        if (this.currentNameIndex >= this.names.length){
+            this.currentNameIndex = 0;
         }
     }
 }
 
-const gen = new NameGenerator();
+const gen = new GenerateNames()
