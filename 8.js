@@ -3,6 +3,16 @@ const delay = ms => {
         setTimeout(() => r(), ms))
 }
 
-delay(5000).then(() => {
-    console.log('Delay 5 seconds')
-})
+const url = 'https://jsonplaceholder.typicode.com/todos'
+
+function fetchData() {
+  console.log('Data is requested in server...')
+  return delay(3000)
+      .then(() => fetch(url))
+           .then(response => response.json())
+
+}
+
+fetchData()
+    .then(data => console.log('Server data: ', data))
+    .catch(e => console.error('Error: ', e))
