@@ -1,0 +1,14 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+.main-header{
+    width: 100%;
+    height: 3.5rem;
+    background: aqua;
+}
+.main-header__item-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
