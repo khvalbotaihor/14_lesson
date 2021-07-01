@@ -10,7 +10,7 @@ app.set('view engine', 'ejs')
 app.set('views', 'views')
 
 app.use(mainRoute)
-app.use(usersRoute)
+app.use(usersRoute.routes)
 app.use(pageNotFoundRoute)
 
 app.listen(3000)

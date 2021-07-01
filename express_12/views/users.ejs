@@ -5,11 +5,20 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title><%= pageTitle%></title>
+    <title><%= pageTitle %></title>
 </head>
 <body>
-<%- include('includes/navigation.ejs')%>
+<%- include('includes/navigation.ejs') %>
 
-<h1>users page</h1>
+<% if (data.length > 0) { %>
+    <h1>Users list</h1>
+    <ul>
+        <% for (let user of data) { %>
+            <li><%= user.title %></li>
+        <% } %>
+    </ul>
+<% } else { %>
+    <h1>No users added</h1>
+<% } %>
 </body>
 </html>
